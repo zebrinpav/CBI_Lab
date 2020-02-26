@@ -1,0 +1,15 @@
+1. small task
+before (wrong)   if (k % 10 > 0) k=k%10;
+after (right) 
+if(k/10>0) k=k%10;
+
+explanation of the problem:
+for k=20  k % 10 > 0 == False  => k=20 (error: Out of range)
+
+
+2. Large task
+function jtransform_request_workspace  has several errors
+a) for info->transform = JXFORM_FLIP_V we must allocate memory as for JXFORM_ROT_180
+when we fix it we have other error for info->transform = JXFORM_TRANSVERSE
+b) for info->transform = JXFORM_TRANSVERSE we must allocate memory as for JXFORM_TRANSPOSE
+
